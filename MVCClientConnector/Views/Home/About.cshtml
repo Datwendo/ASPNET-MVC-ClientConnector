@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Datwendo Cloud Connector is a SaaS application to help integrating legacy applications with various Cloud environments.
+    </p>
+</article>
+
+<aside>
+    <h3>You may also</h3>
+    <p>
+        Select a testing option.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Jscript Test", "Test", "JConnector")</li>
+        <li>@Html.ActionLink("Jscript Test Data", "TestIntString", "JConnector")</li>
+        <li>@Html.ActionLink("Jscript Test Blob", "TestIntBlob", "JConnector")</li>
+    </ul>
+</aside>

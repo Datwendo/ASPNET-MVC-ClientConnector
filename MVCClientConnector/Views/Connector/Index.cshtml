@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Call Connector using Server calls";
+    int CId = (ViewBag.CId != null) ? (int)ViewBag.CId : 0;
+    string secK = (ViewBag.secK != null) ? (string)ViewBag.secK : string.Empty;
+    int newVal = (ViewBag.newVal != null) ? (int)ViewBag.newVal:0;
+    }
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Test Cloud Connector using C# Server Calls</h1>
+            </hgroup>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <div style="float:left; width: 50%;">
+        @using (Html.BeginForm("Index","Connector"))
+        {
+            <label for="Id">Connector Id</label>
+            <input type="text" id="Id" name="Id" value="@CId"/>
+            <label for="Ky">Secret Key</label>
+            <input type="text" id="Ky" name="Ky" value="@secK"/>
+                
+            <label for="nwval">Result</label>
+            <input id="nwval" type="text" disabled class="newValue" value="@newVal"/>
+                
+            <button id="btnNext"  type="submit" name="btnNext">Next</button>
+            <button id="btnRead" type="submit" name="btnRead">Read</button>
+            }
+        </div>
+
+    </section>
+</div>

@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Test String Connector using Javascript";
+   
+   @Scripts.Render("~/bundles/jquery","~/bundles/CallConnectorString")
+}
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Test Data storage for Cloud  Connector using Javascript</h1>
+
+            </hgroup>                
+            <div style="float:right;">
+                @Html.ActionLink("Test", "Test") | 
+                @Html.ActionLink("Test Blob", "TestIntBlob")
+            </div>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <div style="float:left; width: 50%;">
+            
+            <label for="Id">Datwendo Service Url</label>
+            <input type="text" id="ServiceUrl" name="ServiceUrl" value="http://datwendosvc.cloudapp.net/"/>  
+            <label for="Id">Connector Id</label>
+            <input type="text" id="Id" name="Id"/>
+            <label for="Ky">Secret Key</label>
+            <input type="text" id="Ky" name="Ky" />              
+            <label for="Dl">Key Delay</label>
+            <input type="text" id="Dl" name="Dl"  value="20"/>            
+            
+            <label for="Pb">Publisher</label>
+            <input id="Pb" name="Pb" type="text" value="0"/>
+
+            <label for="nwsecret">New Secret</label>
+            <input id="nwsecret" type="text" disabled class="newSecret" />                
+                
+            <label for="nwval">Result</label>
+            <input id="nwval" type="text" disabled class="newValue" />
+                
+            <label for="Error1">Error Code</label>
+            <input id="Error1" type="text" disabled class="Error1" /><br />
+            <button id="btnNext" class="btnNext">Next</button>
+            <button id="btnRead" class="btnRead" >Read</button>
+
+        </div>
+        <div style="float:left; width: 50%;">
+            <label for="lp">Number Loops</label>
+            <input id="lp" type="text" value="10"/>
+            <label for="nwval2">Result Loop</label>
+            <textarea id="nwval2"  class="newValue2"  rows="7"></textarea>
+            <label for="delay">Delay</label>
+            <input id="delay" type="text" disabled class="delay"/>
+            <label for="Error2">Error Code</label>
+            <input id="Error2" type="text" disabled class="Error2" />
+            <img id="loader" src="~/Content/ajax-loader.gif"  /><br />
+            <button id="btnNextLoop" class="btnNextLoop" >Start Next Loops</button>
+            <button id="btnReadLoop" class="btnReadLoop" >Start Read Loops</button>
+        </div>
+        <div style="float:left; width: 100%;">
+            <label for="Idx">Index</label>
+            <input id="Idx" type="text" class="Idx" /><button id="btnFill" class="btnFill" >Fill</button><button id="btnClear" class="btnClear" >Clear</button>
+            <label for="ContentSt">Data Content</label>
+            <textarea id="ContentSt"  class="ContentSt"  rows="20" style="width: 100%;"></textarea>
+            <input type="hidden" id="Ipsum" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim massa a arcu auctor egestas feugiat sed sem. In non est eget velit ullamcorper sagittis vitae sed urna. Etiam porttitor tellus eget quam faucibus congue. Duis gravida imperdiet scelerisque. Nunc pharetra sem elementum mauris lacinia sodales pulvinar risus rhoncus. Pellentesque nulla augue, ultricies eget tincidunt in, lobortis nec felis. Nullam ultrices felis vitae erat rutrum a placerat justo sagittis. Quisque laoreet ante non tortor viverra vel tristique ante interdum. Vestibulum arcu neque, sollicitudin vel viverra lacinia, ultricies in ipsum.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse placerat commodo tellus sed blandit. Praesent dignissim aliquam aliquam. Maecenas viverra, velit non varius interdum, arcu metus ultricies nibh, ac fermentum sapien dolor id ligula. Sed scelerisque, elit vitae gravida varius, erat mi semper libero, vel facilisis quam purus nec magna. Nunc lacinia, elit non porta scelerisque, felis leo lacinia sapien, vel vehicula enim felis non libero. Duis sapien orci, pulvinar eget rutrum mattis, sagittis eget diam. In hac habitasse platea dictumst. Suspendisse potenti. Nulla placerat, velit quis hendrerit eleifend, tellus sem euismod purus, at condimentum enim eros quis nisl. Donec turpis tortor, euismod non blandit id, aliquet vel sem.
+
+Aenean vehicula tempor leo, vitae tincidunt augue pretium in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vehicula ipsum ut nisl tincidunt sollicitudin. Nunc sapien arcu, pulvinar ut porta sit amet, congue at leo. Aenean dictum ornare tellus ac porta. Etiam quis posuere turpis. Pellentesque id magna mauris. Fusce sollicitudin ante quis tellus laoreet et ornare purus placerat. Vivamus sed tellus orci. Phasellus eu orci mauris. Quisque semper elit in nunc tempor tincidunt. Phasellus aliquet, magna a interdum tempus, lacus turpis tincidunt odio, ac volutpat massa metus quis sem. Fusce vehicula ante ac sem tincidunt consequat. Curabitur et diam sit amet turpis dapibus dignissim nec placerat nisi. Nunc vitae sapien ut mauris laoreet porta.
+
+Praesent quis massa nulla, ut eleifend mi. Maecenas a enim nec tellus facilisis sollicitudin et fringilla ante. Nullam vitae odio quis tellus dapibus dictum sed condimentum ante. Integer id felis nisi. Maecenas ornare, sem quis sagittis venenatis, odio sem sollicitudin elit, eu commodo nunc mauris ut dolor. Nunc condimentum pharetra posuere. Nulla dapibus, elit vel suscipit vulputate, augue turpis euismod dui, quis commodo nunc metus eu augue. Donec rutrum justo in diam consequat ut accumsan augue vehicula. Proin molestie porta viverra. Donec laoreet massa ut risus rutrum consequat. Vestibulum ullamcorper, orci eget gravida posuere, nunc turpis egestas turpis, at commodo purus mauris a diam.
+
+Quisque vehicula, massa ac scelerisque gravida, nisi sem iaculis augue, aliquam consequat nibh felis eu felis. Praesent auctor nunc sed sem scelerisque volutpat. Cras iaculis vestibulum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id dui quam. Integer id sem tellus. Integer in ligula nec elit euismod placerat. Vestibulum hendrerit varius dignissim. Aenean nec magna blandit nisl aliquet feugiat ut eget sapien. Integer rutrum arcu sit amet mi imperdiet pretium. Praesent id metus tortor, sollicitudin feugiat felis. Fusce scelerisque dolor vel lectus sollicitudin sit amet." />
+        </div>
+    </section>
+</div>

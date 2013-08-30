@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Call Connector using Javascript";
+    @Scripts.Render("~/bundles/jquery","~/bundles/CallConnector")
+}
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Test Cloud Connector using Javascript</h1>
+            </hgroup>
+            <div style="float:right;">              
+                @Html.ActionLink("Test Data", "TestIntString") |
+                @Html.ActionLink("Test Blob", "TestIntBlob")
+            </div>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <div style="float:left; width: 50%;">
+            <label for="Id">Datwendo Service Url</label>
+            <input type="text" id="ServiceUrl" name="ServiceUrl" value="http://datwendosvc.cloudapp.net/"/>  
+            <label for="Id">Connector Id</label>
+            <input type="text" id="Id" name="Id"/>
+            <label for="Ky">Secret Key</label>
+            <input type="text" id="Ky" name="Ky" />
+            <label for="Dl">Key Delay</label>
+            <input type="text" id="Dl" name="Dl"  value="20"/>            
+            
+            <label for="trace">Trace</label>
+            <input id="trace" name="trace" type="checkbox" />
+            
+            <label for="Pb">Publisher</label>
+            <input id="Pb" name="Pb" type="text" value="0"/>
+
+            <label for="nwval">New Secret</label>
+            <input id="nwsecret" type="text" disabled class="newSecret" />                
+                
+            <label for="nwval">Result</label>
+            <input id="nwval" type="text" disabled class="newValue" />
+                
+            <label for="Error1">Error Code</label>
+            <input id="Error1" type="text" disabled class="Error1" /><br />
+            <button id="btnStart" class="btnStart" >Start</button><button id="btnNext" class="btnNext">Next</button>
+            <button id="btnRead" class="btnRead" >Read</button><button id="btnStop" class="btnStop" >Stop</button>
+            <button id="btnTrace" class="btnTrace" >Trace</button>
+
+        </div>
+        <div style="float:left; width: 50%;">
+            <label for="lp">Number Loops</label>
+            <input id="lp" type="text" value="100"/>
+            <label for="nwval2">Result Loop</label>
+            <textarea id="nwval2"  class="newValue2"  rows="10"></textarea>
+            <label for="delay">Delay</label>
+            <input id="delay" type="text" disabled class="delay"/>
+            <label for="Error2">Error Code</label>
+            <input id="Error2" type="text" disabled class="Error2" />
+            <img id="loader" src="~/Content/ajax-loader.gif"  /><br />
+            <button id="btnNextLoop" class="btnNextLoop" >Start Next Loops</button>
+            <button id="btnReadLoop" class="btnReadLoop" >Start Read Loops</button>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title    = "Test Blob Connector using Javascript";
+    @Scripts.Render("~/bundles/jquery","~/bundles/CallConnectorBlob")
+}
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Test Blob storage for Cloud Connector using Javascript<br />
+                Warning: some features on this page will only work with HTML5 browsers</h1>
+            </hgroup>  
+            <div style="float:right;">              
+                @Html.ActionLink("Test", "Test") | 
+                @Html.ActionLink("Test Data", "TestIntString")
+            </div>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <div style="float:left; width: 50%;">
+            <label for="Id">Datwendo Service Url</label>
+            <input type="text" id="ServiceUrl" name="ServiceUrl" value="http://datwendosvc.cloudapp.net/"/>  
+            <label for="Id">Connector Id</label>
+            <input type="text" id="Id" name="Id"/>
+            <label for="Ky">Secret Key</label>
+            <input type="text" id="Ky" name="Ky" />              
+            <label for="Dl">Key Delay</label>
+            <input type="text" id="Dl" name="Dl"  value="20"/>
+
+            <label for="nwval">New Secret</label>
+            <input id="nwsecret" type="text" disabled class="newSecret" />     
+            
+            <label for="Idx">Index</label>
+            <input id="Idx" type="text" class="Idx" />           
+
+            <label for="Pb">Publisher</label>
+            <input id="Pb" name="Pb" type="text" value="0"/>
+                            
+            <label for="nwval">Result</label>
+            <input id="nwval" type="text" disabled class="newValue" />
+                
+            <label for="Error1">Error Code</label>
+            <input id="Error1" type="text" disabled class="Error1" /><br />
+            <button id="btnRead" class="btnRead" >Read</button><button id="btnClear" class="btnClear" >Clear</button>
+
+        </div>
+
+        <div style="float:left; width: 50%;">
+            <div id="dropzone" class="dropzone">
+                <p>Drop your files here</p>
+            </div><img id="loader" src="~/Content/ajax-loader.gif"  />
+            <div class="filezone">
+                <input type="file" id="files" multiple name="files">
+                <button id="btnSend" class="btnSend" >Send File</button>
+            </div>
+            <div style="float:left; width: 100%;padding: 5px; border: solid 1px black;">
+                Uploaded Files:
+                <ul id="uploadResult">
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
